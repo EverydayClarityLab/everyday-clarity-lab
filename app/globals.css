@@ -85,3 +85,15 @@ a.link:hover {
   outline-offset: 2px;
   border-radius: 10px;
 }
+
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-nav .mobile-nav-menu {
+  display: none;
+}
+
+.mobile-nav[open] .mobile-nav-menu {
+  display: block;
+}
