@@ -6,6 +6,8 @@
   --surface: rgba(255, 255, 255, 0.08);
   --surface-strong: rgba(255, 255, 255, 0.12);
   --surface-accent: rgba(46, 217, 199, 0.12);
+  --surface-elevated: rgba(7, 34, 91, 0.96);
+  --surface-elevated-soft: rgba(9, 40, 104, 0.88);
 
   --text: #ffffff;
   --muted: rgb(255, 255, 255);
@@ -34,6 +36,20 @@ body {
 .card-accent {
   background: var(--surface-accent);
   border: 2px solid rgba(73, 170, 194, 0.945);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.card-strong {
+  background: var(--surface-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.card-strong-soft {
+  background: var(--surface-elevated-soft);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   backdrop-filter: blur(6px);
 }
@@ -68,6 +84,12 @@ body {
   background: linear-gradient(180deg, rgba(46, 217, 199, 0.28), rgba(46, 217, 199, 0.18));
   border-color: rgba(46, 217, 199, 0.78);
   color: #ffffff;
+}
+
+.surface-teal {
+  background: linear-gradient(180deg, rgba(46, 217, 199, 0.22), rgba(46, 217, 199, 0.14));
+  border: 1px solid rgba(46, 217, 199, 0.48);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
 a.link {
