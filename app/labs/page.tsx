@@ -34,8 +34,8 @@ export default function LabsPage() {
         <p className="micro-label">Lab</p>
 
         <p className="max-w-3xl text-lg leading-8 text-white/72">
-          Product concepts with guided tours, governance thinking, and practical
-          build kits.
+          Product concepts with guided tours and practical build paths across
+          Tour, MVP, and CVP.
         </p>
       </header>
 
@@ -56,20 +56,19 @@ export default function LabsPage() {
                   className="btn-secondary"
                   href={`/kits/getting-started/${lab.slug}`}
                 >
-                  Getting Started
+                  View MVP
                 </a>
                 <a
                   className="btn-secondary"
                   href={`/kits/intermediate/${lab.slug}`}
                 >
-                  Intermediate
+                  View CVP
                 </a>
               </div>
             </div>
           </div>
         ))}
       </section>
-
     </main>
   );
 }

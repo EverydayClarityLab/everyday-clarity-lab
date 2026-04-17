@@ -1,10 +1,22 @@
 // app/kits/page.tsx
 
 const labs = [
-  { title: "City Relocation and School Finder", slug: "city-relocation-school-finder" },
-  { title: "Business Starter Copilot for City Limits", slug: "business-starter-copilot" },
-  { title: "Property Tax Increase Appeal Prep Pack", slug: "property-tax-appeal-prep-pack" },
-  { title: "Park District Registration Agent for Parents", slug: "park-district-registration-agent" },
+  {
+    title: "City Relocation and School Finder",
+    slug: "city-relocation-school-finder",
+  },
+  {
+    title: "Business Starter Copilot for City Limits",
+    slug: "business-starter-copilot",
+  },
+  {
+    title: "Property Tax Increase Appeal Prep Pack",
+    slug: "property-tax-appeal-prep-pack",
+  },
+  {
+    title: "Park District Registration Agent for Parents",
+    slug: "park-district-registration-agent",
+  },
 ];
 
 export default function KitsPage() {
@@ -14,16 +26,34 @@ export default function KitsPage() {
         <p className="micro-label">Kits</p>
 
         <p className="max-w-3xl text-lg leading-8 text-white/72">
-          Lightweight guides to replicate the work. Start simple, then move to
-          intermediate with data and GitHub.
+          Build paths organized as Tour, MVP, and CVP so visitors can move from
+          understanding the concept to a stronger implementation without
+          changing the underlying routes.
         </p>
       </header>
 
-      <section className="mt-10 grid gap-6 md:grid-cols-2">
+      <section className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <div className="card p-6">
-          <h2 className="text-2xl font-medium text-white">Getting Started</h2>
+          <h2 className="text-2xl font-medium text-white">Tour</h2>
           <p className="mt-3 leading-8 text-white/72">
-            A calm, practical entry point with minimal setup.
+            A medium-fidelity walkthrough to understand the concept, flow, and
+            value before building.
+          </p>
+
+          <div className="mt-6 grid gap-3">
+            {labs.map((lab) => (
+              <a key={lab.slug} className="btn-secondary" href={`/labs/${lab.slug}`}>
+                {lab.title}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="card p-6">
+          <h2 className="text-2xl font-medium text-white">MVP</h2>
+          <p className="mt-3 leading-8 text-white/72">
+            The first practical build with core tools, setup, and system
+            decisions.
           </p>
 
           <div className="mt-6 grid gap-3">
@@ -40,9 +70,10 @@ export default function KitsPage() {
         </div>
 
         <div className="card p-6">
-          <h2 className="text-2xl font-medium text-white">Intermediate</h2>
+          <h2 className="text-2xl font-medium text-white">CVP</h2>
           <p className="mt-3 leading-8 text-white/72">
-            A deeper build path that will connect to GitHub and structured data.
+            A more complete build path with stronger architecture, governance,
+            and code depth.
           </p>
 
           <div className="mt-6 grid gap-3">
@@ -58,7 +89,6 @@ export default function KitsPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
