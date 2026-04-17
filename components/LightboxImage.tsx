@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 type LightboxImageProps = {
   src: string;
@@ -19,6 +20,7 @@ export default function LightboxImage({
   imageClassName,
 }: LightboxImageProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const canUseDOM = typeof window !== "undefined";
 
   useEffect(() => {
     if (!isOpen) {
@@ -59,39 +61,45 @@ export default function LightboxImage({
         </div>
       </button>
 
-      {isOpen ? (
-        <div
-          className="fixed inset-0 z-[100] bg-[#02154A]/92 px-4 py-6 backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Expanded image view"
-        >
-          <div className="mx-auto flex h-full max-w-6xl flex-col">
-            <div className="flex justify-end pb-4">
-              <button
-                type="button"
-                onClick={() => setIsOpen(false)}
-                className="inline-flex h-12 min-w-12 items-center justify-center rounded-full border border-white/16 bg-white/8 px-4 text-sm font-medium text-white transition hover:border-white/24 hover:bg-white/12"
-              >
-                Close
-              </button>
-            </div>
-
-            <div className="flex-1 overflow-auto rounded-2xl border border-white/10 bg-[#08245f] p-3 shadow-[0_20px_40px_rgba(0,0,0,0.28)] sm:p-4">
-              <div className="flex min-h-full items-start justify-center sm:items-center">
+      {isOpen && canUseDOM
+        ? createPortal(
+        <div className="fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-label="Expanded image view">
+          <button
+            type="button"
+            aria-label="Close expanded image view"
+            className="absolute inset-0 bg-black/72"
+            onClick={() => setIsOpen(false)}
+          />
+          <div className="absolute top-4 right-4 z-20 sm:top-6 sm:right-6">
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/18 bg-[#06173f]/78 px-4 text-sm font-medium text-white shadow-[0_12px_30px_rgba(0,0,0,0.24)] transition hover:border-white/28 hover:bg-[#0a235b]/88"
+            >
+              Close
+            </button>
+          </div>
+          <div
+            className="relative z-10 flex min-h-full items-center justify-center px-4 py-5 sm:px-6"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="w-full max-w-[820px] sm:max-w-[860px]">
+              <div className="overflow-hidden rounded-[24px] bg-[#f3f5f9] p-2 shadow-[0_28px_60px_rgba(0,0,0,0.36)] ring-1 ring-black/8 sm:rounded-[26px] sm:p-3">
                 <Image
                   src={src}
                   alt={alt}
                   width={1024}
                   height={1331}
                   unoptimized
-                  className="block h-auto max-h-[calc(100dvh-9rem)] w-auto max-w-full rounded-xl"
+                  className="mx-auto block h-auto max-h-[calc(100dvh-6.5rem)] w-full rounded-[18px] object-contain sm:rounded-[20px]"
                 />
               </div>
             </div>
           </div>
-        </div>
-      ) : null}
+        </div>,
+        document.body,
+      )
+        : null}
     </>
   );
 }
