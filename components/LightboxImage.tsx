@@ -77,15 +77,17 @@ export default function LightboxImage({
               </button>
             </div>
 
-            <div className="flex-1 overflow-auto rounded-2xl border border-white/10 bg-[#08245f] p-3 shadow-[0_20px_40px_rgba(0,0,0,0.28)]">
-              <Image
-                src={src}
-                alt={alt}
-                width={1024}
-                height={1331}
-                unoptimized
-                className="mx-auto block h-auto max-w-none min-w-full rounded-xl"
-              />
+            <div className="flex-1 overflow-auto rounded-2xl border border-white/10 bg-[#08245f] p-3 shadow-[0_20px_40px_rgba(0,0,0,0.28)] sm:p-4">
+              <div className="flex min-h-full items-start justify-center sm:items-center">
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={1024}
+                  height={1331}
+                  unoptimized
+                  className="block h-auto max-h-[calc(100dvh-9rem)] w-auto max-w-full rounded-xl"
+                />
+              </div>
             </div>
           </div>
         </div>
