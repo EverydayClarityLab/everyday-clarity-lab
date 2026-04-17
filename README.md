@@ -93,6 +93,14 @@ Current blog assets are stored in `public/images`.
 Important note:
 
 - If an updated image does not appear immediately in the browser, use a versioned filename such as `asset-name-v2.png` to avoid cached assets being reused.
+- In-post `image` blocks on notes slug pages use the shared `LightboxImage` viewer in `components/LightboxImage.tsx`.
+- The expected viewer pattern is:
+  - render the modal through a portal to `document.body`
+  - keep the backdrop and image card on separate layers
+  - use a tight light frame around the image, not a large padded mat
+  - let the image dominate the modal with `object-contain` and viewport-based height limits
+  - anchor the close control to the image card so it feels part of the viewer
+  - preserve simple close behavior with backdrop click and `Escape`
 
 ## Tech Stack
 
@@ -108,6 +116,7 @@ Important note:
 - The full post page uses one page `H1` and structured `H2` subheads.
 - Tags appear only on the dedicated post page.
 - Infographics live inside the post body, not on the notes index.
+- In-post images should open into the shared centered viewer rather than a page-contained overlay.
 - The profile image is used as the first post card/hero image until a dedicated post image replaces it.
 
 ## Validation

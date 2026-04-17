@@ -63,35 +63,38 @@ export default function LightboxImage({
 
       {isOpen && canUseDOM
         ? createPortal(
-        <div className="fixed inset-0 z-[100]" role="dialog" aria-modal="true" aria-label="Expanded image view">
+        <div
+          className="fixed inset-0 z-[100]"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Expanded image view"
+        >
           <button
             type="button"
             aria-label="Close expanded image view"
             className="absolute inset-0 bg-black/72"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute top-4 right-4 z-20 sm:top-6 sm:right-6">
-            <button
-              type="button"
-              onClick={() => setIsOpen(false)}
-              className="inline-flex h-11 min-w-11 items-center justify-center rounded-full border border-white/18 bg-[#06173f]/78 px-4 text-sm font-medium text-white shadow-[0_12px_30px_rgba(0,0,0,0.24)] transition hover:border-white/28 hover:bg-[#0a235b]/88"
-            >
-              Close
-            </button>
-          </div>
           <div
-            className="relative z-10 flex min-h-full items-center justify-center px-4 py-5 sm:px-6"
+            className="relative z-10 flex min-h-full items-center justify-center p-4 sm:p-6"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="w-full max-w-[820px] sm:max-w-[860px]">
-              <div className="overflow-hidden rounded-[24px] bg-[#f3f5f9] p-2 shadow-[0_28px_60px_rgba(0,0,0,0.36)] ring-1 ring-black/8 sm:rounded-[26px] sm:p-3">
+            <div className="relative inline-flex max-w-[min(94vw,980px)]">
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="absolute top-2 right-2 z-20 inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-slate-200/90 bg-white/92 px-3 text-sm font-medium text-slate-700 shadow-[0_12px_30px_rgba(0,0,0,0.18)] transition hover:bg-white sm:top-3 sm:right-3"
+              >
+                Close
+              </button>
+              <div className="overflow-hidden rounded-[22px] bg-[#f8fafc] p-1.5 shadow-[0_28px_60px_rgba(0,0,0,0.36)] ring-1 ring-black/8 sm:rounded-[24px] sm:p-2">
                 <Image
                   src={src}
                   alt={alt}
                   width={1024}
                   height={1331}
                   unoptimized
-                  className="mx-auto block h-auto max-h-[calc(100dvh-6.5rem)] w-full rounded-[18px] object-contain sm:rounded-[20px]"
+                  className="block h-auto max-h-[calc(100dvh-3.5rem)] w-auto max-w-full rounded-[18px] object-contain sm:max-h-[calc(100dvh-5rem)]"
                 />
               </div>
             </div>
