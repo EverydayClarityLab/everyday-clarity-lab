@@ -26,9 +26,9 @@ export default function KitsPage() {
         <p className="micro-label">Kits</p>
 
         <p className="max-w-3xl text-lg leading-8 text-white/72">
-          Build paths organized as Tour, MVP, and CVP so visitors can move from
-          understanding the concept to a stronger implementation without
-          changing the underlying routes.
+          Kits are the implementation layer. Choose the depth you want, from a
+          concept-level Tour to MVP and CVP paths that go deeper into system
+          decisions, architecture, and code handoff.
         </p>
       </header>
 

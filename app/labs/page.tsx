@@ -34,8 +34,9 @@ export default function LabsPage() {
         <p className="micro-label">Lab</p>
 
         <p className="max-w-3xl text-lg leading-8 text-white/72">
-          Product concepts with guided tours and practical build paths across
-          Tour, MVP, and CVP.
+          Labs help visitors understand the idea, problem framing, and
+          user-facing experience. Kits go deeper into how each concept is
+          built.
         </p>
       </header>
 

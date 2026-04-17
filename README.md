@@ -1,6 +1,27 @@
 # Everyday Clarity Lab
 
-Everyday Clarity Lab is a Next.js site for publishing product strategy, AI-supported builds, and practical workflow ideas. The site currently includes a homepage, kits pages, labs pages, and a notes/blog system with index cards and dedicated post routes.
+Everyday Clarity Lab is a Next.js site for publishing product strategy, AI-supported builds, and practical workflow ideas. The site is structured to separate concept storytelling from implementation depth through two layers: Labs, which showcase ideas and experience, and Kits, which document build paths, systems thinking, and technical progression.
+
+## Site Structure
+
+Everyday Clarity Lab is organized into two distinct layers: Labs and Kits.
+
+### Labs
+
+Labs showcase product ideas, problem framing, and the user-facing experience. They help visitors understand what a concept is, why it matters, and what using it could feel like. Tour pages live here.
+
+### Kits
+
+Kits show how concepts are built. They provide the implementation layer through MVP and CVP paths, including technical breakdowns, system decisions, and links to repos, code, and supporting READMEs.
+
+### How they work together
+
+Labs and Kits are designed to complement each other, not duplicate each other.
+
+- Labs explain the concept and experience.
+- Kits explain the build path and technical depth.
+
+This structure lets Everyday Clarity Lab present ideas clearly while keeping live products and private builds in their own separate repositories and deployments.
 
 ## Local Development
 
