@@ -1,5 +1,4 @@
 // app/labs/property-tax-appeal-prep-pack/page.tsx
-import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function PropertyTaxAppealPrepPackPage() {
@@ -48,7 +47,6 @@ export default function PropertyTaxAppealPrepPackPage() {
         </p>
       </section>
 
-      <Footer />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import Footer from "@/components/Footer";
+import LightboxImage from "@/components/LightboxImage";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -126,14 +126,12 @@ export default async function NotePostPage({
                   key={block.src}
                   className="mt-3 mb-12 mx-auto max-w-3xl overflow-hidden rounded-[28px] border border-[#2ED9C7]/16 bg-[linear-gradient(180deg,#143b82,#103472)] p-3 shadow-[0_16px_32px_rgba(0,0,0,0.2)] ring-1 ring-white/10"
                 >
-                  <div className="relative aspect-[1024/1331] w-full overflow-hidden rounded-[22px] bg-[#102d6a]">
-                    <Image
-                      src={block.src}
-                      alt={block.alt}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
+                  <LightboxImage
+                    src={block.src}
+                    alt={block.alt}
+                    aspectRatioClassName="aspect-[1024/1331] overflow-hidden rounded-[22px] bg-[#102d6a]"
+                    imageClassName="object-contain"
+                  />
                 </figure>
               );
             }
@@ -142,12 +140,12 @@ export default async function NotePostPage({
               return (
                 <div
                   key={block.href}
-                  className="rounded-2xl border border-[#2ED9C7]/38 bg-[linear-gradient(180deg,rgba(46,217,199,0.2),rgba(46,217,199,0.12))] px-6 py-6 text-base leading-8 text-white shadow-[0_18px_36px_rgba(0,0,0,0.18)]"
+                  className="-mx-4 rounded-none border-y border-[#2ED9C7]/30 bg-[linear-gradient(180deg,rgba(46,217,199,0.18),rgba(46,217,199,0.1))] px-4 py-5 text-sm leading-7 text-white shadow-[0_14px_28px_rgba(0,0,0,0.16)] sm:mx-0 sm:rounded-2xl sm:border sm:px-6 sm:py-6 sm:text-base sm:leading-8 sm:shadow-[0_18px_36px_rgba(0,0,0,0.18)]"
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
                     <span
                       aria-hidden="true"
-                      className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#2ED9C7]/35 bg-[#0b2d70] text-[#2ED9C7]"
+                      className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#2ED9C7]/35 bg-[#0b2d70] text-[#2ED9C7] sm:h-11 sm:w-11"
                     >
                       <svg
                         viewBox="0 0 24 24"
@@ -163,7 +161,7 @@ export default async function NotePostPage({
                         href={block.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-white underline underline-offset-4"
+                        className="mt-3 inline-flex min-h-11 items-center gap-2 text-sm font-medium text-white underline underline-offset-4"
                       >
                         {block.label}
                         <svg
@@ -203,8 +201,6 @@ export default async function NotePostPage({
           </div>
         </section>
       </article>
-
-      <Footer />
     </main>
   );
 }

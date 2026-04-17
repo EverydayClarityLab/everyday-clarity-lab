@@ -1,5 +1,4 @@
 // app/labs/city-relocation-school-finder/page.tsx
-import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function CityRelocationSchoolFinderPage() {
@@ -48,7 +47,6 @@ export default function CityRelocationSchoolFinderPage() {
         </p>
       </section>
 
-      <Footer />
     </main>
   );
 }

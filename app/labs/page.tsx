@@ -1,5 +1,4 @@
 // app/labs/page.tsx
-import Footer from "@/components/Footer";
 
 const labs = [
   {
@@ -71,7 +70,6 @@ export default function LabsPage() {
         ))}
       </section>
 
-      <Footer />
     </main>
   );
 }

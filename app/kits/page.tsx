@@ -1,5 +1,4 @@
 // app/kits/page.tsx
-import Footer from "@/components/Footer";
 
 const labs = [
   { title: "City Relocation and School Finder", slug: "city-relocation-school-finder" },
@@ -60,7 +59,6 @@ export default function KitsPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

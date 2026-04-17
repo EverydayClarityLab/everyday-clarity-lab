@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Footer from "../components/Footer";
 
 function CornerLines({
   className,
@@ -259,9 +258,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="relative z-10 px-6 pb-10">
-        <Footer />
-      </div>
     </main>
   );
 }

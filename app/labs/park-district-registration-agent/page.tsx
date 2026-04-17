@@ -1,5 +1,4 @@
 // app/labs/park-district-registration-agent/page.tsx
-import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function ParkDistrictRegistrationAgentPage() {
@@ -47,7 +46,6 @@ export default function ParkDistrictRegistrationAgentPage() {
         </p>
       </section>
 
-      <Footer />
     </main>
   );
 }

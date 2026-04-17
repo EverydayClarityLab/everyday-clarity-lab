@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
@@ -29,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen bg-[#02154A] text-white">
+        <div className="flex min-h-screen flex-col bg-[#02154A] text-white">
           <header className="relative z-50">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
               <Link
@@ -99,7 +100,8 @@ export default function RootLayout({
             </div>
           </header>
 
-          {children}
+          <div className="flex-1">{children}</div>
+          <Footer />
         </div>
       </body>
     </html>

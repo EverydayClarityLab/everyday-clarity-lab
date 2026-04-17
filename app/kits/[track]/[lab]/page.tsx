@@ -1,5 +1,4 @@
 // app/kits/[track]/[lab]/page.tsx
-import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 const labMap: Record<string, { title: string }> = {
@@ -72,7 +71,6 @@ export default async function KitPage({
         </p>
       </section>
 
-      <Footer />
     </main>
   );
 }

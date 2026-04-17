@@ -1,5 +1,4 @@
 // app/labs/business-starter-copilot/page.tsx
-import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export default function BusinessStarterCopilotPage() {
@@ -48,7 +47,6 @@ export default function BusinessStarterCopilotPage() {
         </p>
       </section>
 
-      <Footer />
     </main>
   );
 }

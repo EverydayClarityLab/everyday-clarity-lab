@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { buildNotesDigest, notePosts } from "./posts";
@@ -82,8 +81,6 @@ export default function NotesPage() {
           </Link>
         ))}
       </section>
-
-      <Footer />
     </main>
   );
 }

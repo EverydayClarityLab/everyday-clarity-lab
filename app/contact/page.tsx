@@ -1,5 +1,4 @@
 // app/contact/page.tsx
-import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const linkedInUrl = "https://www.linkedin.com/in/analicial-0q7e6/";
@@ -40,7 +39,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }
