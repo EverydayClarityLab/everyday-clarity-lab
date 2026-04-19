@@ -27,13 +27,13 @@ export default function PropertyTaxAppealPrepPackPage() {
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
             className="btn-secondary"
-            href="/kits/getting-started/property-tax-appeal-prep-pack"
+            href="/kits/mvp/property-tax-appeal-prep-pack"
           >
             View MVP
           </Link>
           <Link
             className="btn-secondary"
-            href="/kits/intermediate/property-tax-appeal-prep-pack"
+            href="/kits/cvp/property-tax-appeal-prep-pack"
           >
             View CVP
           </Link>

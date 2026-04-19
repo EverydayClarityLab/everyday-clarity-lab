@@ -1,6 +1,10 @@
 # ECL Cleanup Backlog
 
+Status: initial cleanup pass shipped. Keep this file as a reference for future refinements and regression checks.
+
 ## P1. Route Rename Cleanup
+
+Status: shipped.
 
 Goal: rename the underlying route structure from `getting-started` / `intermediate` to `mvp` / `cvp`.
 
@@ -19,6 +23,8 @@ Definition of done:
 
 ## P1. Copy Consistency Sweep
 
+Status: shipped for current public labels.
+
 Goal: remove mixed language between Labs, Kits, README, and detail pages.
 
 Tasks:
@@ -31,6 +37,8 @@ Definition of done:
 - One consistent vocabulary system across repo and UI.
 
 ## P1. Private Runtime Exposure Audit
+
+Status: shipped for current public code search.
 
 Goal: guarantee ECL never exposes private live runtimes.
 
@@ -45,6 +53,8 @@ Definition of done:
 
 ## P2. Content Model Cleanup
 
+Status: shipped for the current Kits/Labs catalog.
+
 Goal: make future additions easier.
 
 Tasks:
@@ -56,6 +66,8 @@ Definition of done:
 - Future cards and pages can be added once, consistently.
 
 ## P2. Smoke Test Checklist
+
+Status: shipped.
 
 Goal: make shipping safer next time.
 

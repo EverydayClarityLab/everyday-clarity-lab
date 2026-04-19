@@ -31,13 +31,16 @@ The public UI should use the current product language consistently:
 - MVP
 - CVP
 
-The underlying route folders have not been renamed yet. For now, the safe mapping is:
-
 - Tour -> `/labs/{slug}`
-- MVP -> `/kits/getting-started/{slug}`
-- CVP -> `/kits/intermediate/{slug}`
+- MVP -> `/kits/mvp/{slug}`
+- CVP -> `/kits/cvp/{slug}`
 
-Do not surface `Getting Started` or `Intermediate` as visible labels on public pages. Those names are temporary implementation details until the route folders are renamed in a later cleanup.
+Legacy URLs from the earlier naming model redirect to the new public paths:
+
+- `/kits/getting-started/{slug}` -> `/kits/mvp/{slug}`
+- `/kits/intermediate/{slug}` -> `/kits/cvp/{slug}`
+
+Do not surface `Getting Started` or `Intermediate` as visible labels on public pages.
 
 ## Local Development
 

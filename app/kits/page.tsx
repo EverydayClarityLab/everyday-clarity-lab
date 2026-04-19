@@ -1,23 +1,5 @@
 // app/kits/page.tsx
-
-const labs = [
-  {
-    title: "City Relocation and School Finder",
-    slug: "city-relocation-school-finder",
-  },
-  {
-    title: "Business Starter Copilot for City Limits",
-    slug: "business-starter-copilot",
-  },
-  {
-    title: "Property Tax Increase Appeal Prep Pack",
-    slug: "property-tax-appeal-prep-pack",
-  },
-  {
-    title: "Park District Registration Agent for Parents",
-    slug: "park-district-registration-agent",
-  },
-];
+import { kitLabs } from "./catalog";
 
 export default function KitsPage() {
   return (
@@ -41,7 +23,7 @@ export default function KitsPage() {
           </p>
 
           <div className="mt-6 grid gap-3">
-            {labs.map((lab) => (
+            {kitLabs.map((lab) => (
               <a key={lab.slug} className="btn-secondary" href={`/labs/${lab.slug}`}>
                 {lab.title}
               </a>
@@ -57,11 +39,11 @@ export default function KitsPage() {
           </p>
 
           <div className="mt-6 grid gap-3">
-            {labs.map((lab) => (
+            {kitLabs.map((lab) => (
               <a
                 key={lab.slug}
                 className="btn-secondary"
-                href={`/kits/getting-started/${lab.slug}`}
+                href={`/kits/mvp/${lab.slug}`}
               >
                 {lab.title}
               </a>
@@ -77,11 +59,11 @@ export default function KitsPage() {
           </p>
 
           <div className="mt-6 grid gap-3">
-            {labs.map((lab) => (
+            {kitLabs.map((lab) => (
               <a
                 key={lab.slug}
                 className="btn-secondary"
-                href={`/kits/intermediate/${lab.slug}`}
+                href={`/kits/cvp/${lab.slug}`}
               >
                 {lab.title}
               </a>

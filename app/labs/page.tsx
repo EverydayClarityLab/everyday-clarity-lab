@@ -1,31 +1,5 @@
 // app/labs/page.tsx
-
-const labs = [
-  {
-    title: "City Relocation and School Finder",
-    slug: "city-relocation-school-finder",
-    description:
-      "A guided decision flow to help families understand assigned schools, enrollment steps, and key contacts without hunting across pages.",
-  },
-  {
-    title: "Business Starter Copilot for City Limits",
-    slug: "business-starter-copilot",
-    description:
-      "Plain-language business startup guidance with citations to permits, ordinances, and forms, plus a next-best-step checklist.",
-  },
-  {
-    title: "Property Tax Increase Appeal Prep Pack",
-    slug: "property-tax-appeal-prep-pack",
-    description:
-      "An evidence-based preparation pack that organizes property facts, comparable data, and questions for an assessor meeting.",
-  },
-  {
-    title: "Park District Registration Agent for Parents",
-    slug: "park-district-registration-agent",
-    description:
-      "A parent-friendly workflow to find programs, handle constraints, and complete registration steps without handling payments.",
-  },
-];
+import { kitLabs } from "../kits/catalog";
 
 export default function LabsPage() {
   return (
@@ -41,7 +15,7 @@ export default function LabsPage() {
       </header>
 
       <section className="mt-10 grid gap-5">
-        {labs.map((lab) => (
+        {kitLabs.map((lab) => (
           <div key={lab.slug} className="card p-6">
             <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
               <div className="max-w-3xl space-y-2">
@@ -55,13 +29,13 @@ export default function LabsPage() {
                 </a>
                 <a
                   className="btn-secondary"
-                  href={`/kits/getting-started/${lab.slug}`}
+                  href={`/kits/mvp/${lab.slug}`}
                 >
                   View MVP
                 </a>
                 <a
                   className="btn-secondary"
-                  href={`/kits/intermediate/${lab.slug}`}
+                  href={`/kits/cvp/${lab.slug}`}
                 >
                   View CVP
                 </a>

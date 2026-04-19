@@ -1,21 +1,23 @@
 // app/kits/[track]/[lab]/page.tsx
+import type { Metadata } from "next";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import Link from "next/link";
+import { getKitLabTitle, kitTrackLabels } from "../../catalog";
 
-const labMap: Record<string, { title: string }> = {
-  "city-relocation-school-finder": {
-    title: "City Relocation and School Finder",
-  },
-  "business-starter-copilot": {
-    title: "Business Starter Copilot for City Limits",
-  },
-  "property-tax-appeal-prep-pack": {
-    title: "Property Tax Increase Appeal Prep Pack",
-  },
-  "park-district-registration-agent": {
-    title: "Park District Registration Agent for Parents",
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ track: string; lab: string }>;
+}): Promise<Metadata> {
+  const { track, lab } = await params;
+  const labTitle = getKitLabTitle(lab);
+  const trackTitle = kitTrackLabels[track] ?? "Kit";
+
+  return {
+    title: `${trackTitle} Kit: ${labTitle} | Everyday Clarity Lab`,
+    description: `${trackTitle} implementation path for ${labTitle}.`,
+  };
+}
 
 export default async function KitPage({
   params,
@@ -24,13 +26,8 @@ export default async function KitPage({
 }) {
   const { track, lab } = await params;
 
-  const labTitle = labMap[lab]?.title ?? "Lab";
-  const trackTitle =
-    track === "getting-started"
-      ? "MVP"
-      : track === "intermediate"
-        ? "CVP"
-        : "Kit";
+  const labTitle = getKitLabTitle(lab);
+  const trackTitle = kitTrackLabels[track] ?? "Kit";
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">

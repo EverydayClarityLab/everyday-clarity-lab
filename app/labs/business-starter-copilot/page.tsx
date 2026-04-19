@@ -27,13 +27,13 @@ export default function BusinessStarterCopilotPage() {
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
             className="btn-secondary"
-            href="/kits/getting-started/business-starter-copilot"
+            href="/kits/mvp/business-starter-copilot"
           >
             View MVP
           </Link>
           <Link
             className="btn-secondary"
-            href="/kits/intermediate/business-starter-copilot"
+            href="/kits/cvp/business-starter-copilot"
           >
             View CVP
           </Link>

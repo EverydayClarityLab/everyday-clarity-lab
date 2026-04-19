@@ -27,13 +27,13 @@ export default function CityRelocationSchoolFinderPage() {
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
             className="btn-secondary"
-            href="/kits/getting-started/city-relocation-school-finder"
+            href="/kits/mvp/city-relocation-school-finder"
           >
             View MVP
           </Link>
           <Link
             className="btn-secondary"
-            href="/kits/intermediate/city-relocation-school-finder"
+            href="/kits/cvp/city-relocation-school-finder"
           >
             View CVP
           </Link>

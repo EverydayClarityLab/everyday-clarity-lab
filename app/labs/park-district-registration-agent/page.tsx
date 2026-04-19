@@ -26,13 +26,13 @@ export default function ParkDistrictRegistrationAgentPage() {
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
             className="btn-secondary"
-            href="/kits/getting-started/park-district-registration-agent"
+            href="/kits/mvp/park-district-registration-agent"
           >
             View MVP
           </Link>
           <Link
             className="btn-secondary"
-            href="/kits/intermediate/park-district-registration-agent"
+            href="/kits/cvp/park-district-registration-agent"
           >
             View CVP
           </Link>
