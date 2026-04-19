@@ -1,5 +1,6 @@
 // app/labs/property-tax-appeal-prep-pack/page.tsx
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Link from "next/link";
 
 export default function PropertyTaxAppealPrepPackPage() {
   return (
@@ -24,18 +25,18 @@ export default function PropertyTaxAppealPrepPackPage() {
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a
+          <Link
             className="btn-secondary"
             href="/kits/getting-started/property-tax-appeal-prep-pack"
           >
-            Getting Started Kit
-          </a>
-          <a
+            View MVP
+          </Link>
+          <Link
             className="btn-secondary"
             href="/kits/intermediate/property-tax-appeal-prep-pack"
           >
-            Intermediate Kit
-          </a>
+            View CVP
+          </Link>
         </div>
       </header>
 

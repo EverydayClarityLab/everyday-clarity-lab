@@ -1,5 +1,6 @@
 // app/labs/park-district-registration-agent/page.tsx
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Link from "next/link";
 
 export default function ParkDistrictRegistrationAgentPage() {
   return (
@@ -23,18 +24,18 @@ export default function ParkDistrictRegistrationAgentPage() {
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a
+          <Link
             className="btn-secondary"
             href="/kits/getting-started/park-district-registration-agent"
           >
-            Getting Started Kit
-          </a>
-          <a
+            View MVP
+          </Link>
+          <Link
             className="btn-secondary"
             href="/kits/intermediate/park-district-registration-agent"
           >
-            Intermediate Kit
-          </a>
+            View CVP
+          </Link>
         </div>
       </header>
 

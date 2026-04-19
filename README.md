@@ -23,6 +23,22 @@ Labs and Kits are designed to complement each other, not duplicate each other.
 
 This structure lets Everyday Clarity Lab present ideas clearly while keeping live products and private builds in their own separate repositories and deployments.
 
+### Current route mapping
+
+The public UI should use the current product language consistently:
+
+- Tour
+- MVP
+- CVP
+
+The underlying route folders have not been renamed yet. For now, the safe mapping is:
+
+- Tour -> `/labs/{slug}`
+- MVP -> `/kits/getting-started/{slug}`
+- CVP -> `/kits/intermediate/{slug}`
+
+Do not surface `Getting Started` or `Intermediate` as visible labels on public pages. Those names are temporary implementation details until the route folders are renamed in a later cleanup.
+
 ## Local Development
 
 Run the development server:

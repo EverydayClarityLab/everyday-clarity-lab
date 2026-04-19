@@ -1,5 +1,6 @@
 // app/kits/[track]/[lab]/page.tsx
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Link from "next/link";
 
 const labMap: Record<string, { title: string }> = {
   "city-relocation-school-finder": {
@@ -26,9 +27,9 @@ export default async function KitPage({
   const labTitle = labMap[lab]?.title ?? "Lab";
   const trackTitle =
     track === "getting-started"
-      ? "Getting Started"
+      ? "MVP"
       : track === "intermediate"
-        ? "Intermediate"
+        ? "CVP"
         : "Kit";
 
   return (
@@ -50,12 +51,12 @@ export default async function KitPage({
         <p className="max-w-3xl text-lg leading-8 text-white/72">{labTitle}</p>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a className="btn-secondary" href={`/labs/${lab}`}>
+          <Link className="btn-secondary" href={`/labs/${lab}`}>
             Back to Lab
-          </a>
-          <a className="btn-secondary" href="/kits">
+          </Link>
+          <Link className="btn-secondary" href="/kits">
             All Kits
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -66,7 +67,7 @@ export default async function KitPage({
           guidance, and troubleshooting.
         </p>
         <p className="leading-8 text-white/72">
-          Intermediate kits will also link to GitHub for example data and a
+          CVP kits will also link to GitHub for example data and a
           reference implementation pattern.
         </p>
       </section>

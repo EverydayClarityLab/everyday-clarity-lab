@@ -1,5 +1,6 @@
 // app/labs/city-relocation-school-finder/page.tsx
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Link from "next/link";
 
 export default function CityRelocationSchoolFinderPage() {
   return (
@@ -24,18 +25,18 @@ export default function CityRelocationSchoolFinderPage() {
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a
+          <Link
             className="btn-secondary"
             href="/kits/getting-started/city-relocation-school-finder"
           >
-            Getting Started Kit
-          </a>
-          <a
+            View MVP
+          </Link>
+          <Link
             className="btn-secondary"
             href="/kits/intermediate/city-relocation-school-finder"
           >
-            Intermediate Kit
-          </a>
+            View CVP
+          </Link>
         </div>
       </header>
 

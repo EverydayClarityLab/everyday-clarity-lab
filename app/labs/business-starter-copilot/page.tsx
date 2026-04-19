@@ -1,5 +1,6 @@
 // app/labs/business-starter-copilot/page.tsx
 import Breadcrumbs from "@/components/Breadcrumbs";
+import Link from "next/link";
 
 export default function BusinessStarterCopilotPage() {
   return (
@@ -24,18 +25,18 @@ export default function BusinessStarterCopilotPage() {
         </p>
 
         <div className="flex flex-wrap gap-3 pt-2">
-          <a
+          <Link
             className="btn-secondary"
             href="/kits/getting-started/business-starter-copilot"
           >
-            Getting Started Kit
-          </a>
-          <a
+            View MVP
+          </Link>
+          <Link
             className="btn-secondary"
             href="/kits/intermediate/business-starter-copilot"
           >
-            Intermediate Kit
-          </a>
+            View CVP
+          </Link>
         </div>
       </header>
 
